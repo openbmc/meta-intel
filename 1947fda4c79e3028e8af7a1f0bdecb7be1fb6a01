@@ -1,0 +1,9 @@
+Code-Review+1: Matt Spinler <spinler@us.ibm.com>
+Ok-To-Test+1: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+2: James Feist <james.feist@linux.intel.com>
+Submitted-by: James Feist <james.feist@linux.intel.com>
+Submitted-at: Thu, 06 Sep 2018 18:52:41 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/12369
+Project: openbmc/meta-intel
+Branch: refs/heads/master
