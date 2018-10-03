@@ -1,0 +1,13 @@
+[Unit]
+Description=CPU Sensor
+ConditionFileNotEmpty={bindir}/cpusensor
+StopWhenUnneeded=false
+
+[Service]
+Restart=always
+RestartSec=5
+StartLimitBurst=10
+ExecStart={bindir}/cpusensor
+
+[Install]
+WantedBy=multi-user.target
