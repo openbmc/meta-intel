@@ -1,0 +1,35 @@
+SUMMARY = "Intel OEM IPMI commands"
+DESCRIPTION = "Intel OEM IPMI commands"
+
+LICENSE = "Apache-2.0"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=a6a4edad4aed50f39a66d098d74b265b"
+
+SRC_URI = "git://github.com/openbmc/intel-ipmi-oem"
+SRCREV = "a709f5b6587b71cd62a23428aea08f51b98cf06f"
+
+S = "${WORKDIR}/git"
+PV = "0.1+git${SRCPV}"
+
+DEPENDS = "boost phosphor-ipmi-host systemd microsoft-gsl"
+
+inherit cmake obmc-phosphor-ipmiprovider-symlink
+
+EXTRA_OECMAKE="-DENABLE_TEST=0 -DYOCTO=1"
+
+LIBRARY_NAMES = "libsensorcommands.so"
+LIBRARY_NAMES += "libzstoragecommands.so"
+LIBRARY_NAMES += "libglobalcommands.so"
+LIBRARY_NAMES += "liboemcmds.so"
+
+HOSTIPMI_PROVIDER_LIBRARY += "${LIBRARY_NAMES}"
+NETIPMI_PROVIDER_LIBRARY += "${LIBRARY_NAMES}"
+
+FILES_${PN}_append = " ${libdir}/ipmid-providers/lib*${SOLIBS}"
+FILES_${PN}_append = " ${libdir}/host-ipmid/lib*${SOLIBS}"
+FILES_${PN}_append = " ${libdir}/net-ipmid/lib*${SOLIBS}"
+FILES_${PN}-dev_append = " ${libdir}/ipmid-providers/lib*${SOLIBSDEV}"
+
+do_configure_prepend() {
+    cp -r ${WORKDIR}/recipe-sysroot${libdir}/phosphor-ipmi-host ${S}
+    cp -r ${WORKDIR}/recipe-sysroot${includedir}/phosphor-ipmi-host ${S}
+}
