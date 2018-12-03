@@ -1,0 +1,10 @@
+Code-Review+1: Brad Bishop <bradleyb@fuzziesquirrel.com>
+Code-Review+2: Ed Tanous <ed.tanous@intel.com>
+Ok-To-Test+1: Ed Tanous <ed.tanous@intel.com>
+Verified+1: Ed Tanous <ed.tanous@intel.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Submitted-by: James Feist <james.feist@linux.intel.com>
+Submitted-at: Mon, 03 Dec 2018 17:26:20 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/16339
+Project: openbmc/meta-intel
+Branch: refs/heads/master
