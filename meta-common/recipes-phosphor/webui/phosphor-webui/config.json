@@ -1,0 +1,5 @@
+{
+  "redfishSupportEnabled" : false,
+  "customKeyEnable": true,
+  "keyType" : "VT100+"
+}
