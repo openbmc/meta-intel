@@ -1,0 +1,37 @@
+From 5731d115671f011623d43c37246608db3c4ebdb0 Mon Sep 17 00:00:00 2001
+From: Kuiying Wang <kuiying.wang@intel.com>
+Date: Fri, 22 Mar 2019 13:36:22 +0800
+Subject: [PATCH] Should patch to config.json file but not override by install.
+
+Otherwise existing config will be overridden.
+This time "redfishSupportEnabled" is overridden and removed,
+cause WebUI fail to get information from Redfish.
+
+Tested:
+      Launch WebUI and check each page information.
+
+Signed-off-by: Kuiying Wang <kuiying.wang@intel.com>
+Change-Id: I236c3c10785482d8fc2e55f5e6de0287a8088669
+Signed-off-by: Kuiying Wang <kuiying.wang@intel.com>
+---
+ config.json | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/config.json b/config.json
+index c8c49e1..15dfaa6 100644
+--- a/config.json
++++ b/config.json
+@@ -1,3 +1,9 @@
+ {
+-  "redfishSupportEnabled" : true
++  "redfishSupportEnabled" : true,
++  "customKeyEnable": true,
++  "keyType" : "VT100+",
++  "customConsoleDisplaySize": {
++    "width": 100,
++    "height": 32
++  }
+ }
+-- 
+2.19.1
+

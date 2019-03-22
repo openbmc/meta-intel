@@ -1,8 +1,4 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append = " file://config.json"
-
-do_compile_prepend() {
-        cp -r ${WORKDIR}/config.json ${S}/
-}
+SRC_URI_append = " file://0001-Should-patch-to-config.json-file-but-not-override-by.patch "
 
