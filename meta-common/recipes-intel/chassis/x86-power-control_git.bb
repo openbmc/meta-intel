@@ -14,10 +14,10 @@ inherit cmake pkgconfig  pythonnative systemd
 SYSTEMD_SERVICE_${PN} += "xyz.openbmc_project.Chassis.Control.Power@.service"
 
 # Force the standby target to run these services
-SYSD_TGT = "${SYSTEMD_DEFAULT_TARGET}"
+SYSD_TGT = "multi-user.target"
 
 POWER_TMPL_CTRL = "xyz.openbmc_project.Chassis.Control.Power@.service"
-#SYSD_TGT = "${SYSTEMD_DEFAULT_TARGET}"
+#SYSD_TGT = "multi-user.target"
 POWER_INSTFMT_CTRL = "xyz.openbmc_project.Chassis.Control.Power@{0}.service"
 POWER_FMT_CTRL = "../${POWER_TMPL_CTRL}:${SYSD_TGT}.wants/${POWER_INSTFMT_CTRL}"
 SYSTEMD_LINK_${PN} += "${@compose_list_zip(d, 'POWER_FMT_CTRL', 'OBMC_HOST_INSTANCES')}"
@@ -51,7 +51,7 @@ SYSTEMD_LINK_${PN} += "${@compose_list_zip(d, 'RESET_ON_CHASSIS_FMT', 'OBMC_CHAS
 
 # Force the standby target to run the chassis reset check target
 RESET_TMPL_CTRL = "obmc-chassis-powerreset@.target"
-SYSD_TGT = "${SYSTEMD_DEFAULT_TARGET}"
+SYSD_TGT = "multi-user.target"
 RESET_INSTFMT_CTRL = "obmc-chassis-powerreset@{0}.target"
 RESET_FMT_CTRL = "../${RESET_TMPL_CTRL}:${SYSD_TGT}.wants/${RESET_INSTFMT_CTRL}"
 SYSTEMD_LINK_${PN} += "${@compose_list_zip(d, 'RESET_FMT_CTRL', 'OBMC_CHASSIS_INSTANCES')}"
