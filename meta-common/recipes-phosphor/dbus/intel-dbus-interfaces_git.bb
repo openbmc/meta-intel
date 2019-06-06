@@ -15,7 +15,7 @@ DEPENDS += "autoconf-archive-native"
 DEPENDS += "sdbus++-native"
 
 SRC_URI = "git://github.com/openbmc/intel-dbus-interfaces"
-SRCREV = "2b8f89f5876c5a97a34cdf922729d4283d5f2627"
+SRCREV = "0422213a97d27c2420353c6e7e247381bc247a2c"
 
 DEPENDS_remove_class-native = "sdbus++-native"
 DEPENDS_remove_class-nativesdk = "sdbus++-native"
