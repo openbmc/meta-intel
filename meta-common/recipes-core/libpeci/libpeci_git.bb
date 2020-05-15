@@ -11,10 +11,3 @@ PV = "0.1+git${SRCPV}"
 SRCREV = "7ef5a55777bb4d0c403a4eca98c487fa4e9c7bd1"
 
 S = "${WORKDIR}/git"
-
-# linux-libc-headers guides this way to include custom uapi headers
-CFLAGS_append = " -I ${STAGING_KERNEL_DIR}/include/uapi"
-CFLAGS_append = " -I ${STAGING_KERNEL_DIR}/include"
-CXXFLAGS_append = " -I ${STAGING_KERNEL_DIR}/include/uapi"
-CXXFLAGS_append = " -I ${STAGING_KERNEL_DIR}/include"
-do_configure[depends] += "virtual/kernel:do_shared_workdir"
