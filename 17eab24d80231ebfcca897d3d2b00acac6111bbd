@@ -1,0 +1,9 @@
+Code-Review+1: Vikram B <vikram.bodireddy@linux.intel.com>
+Code-Review+2: Jason Bills <jason.m.bills@linux.intel.com>
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Submitted-by: AppaRao Puli <apparao.puli@linux.intel.com>
+Submitted-at: Fri, 29 May 2020 15:45:45 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-intel/+/32843
+Project: openbmc/meta-intel
+Branch: refs/heads/master
