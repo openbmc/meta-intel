@@ -12,4 +12,5 @@ SRCREV = "53099c49b89c22cfe09c7217679ae1fb20e019eb"
 S = "${WORKDIR}/git"
 
 SYSTEMD_SERVICE_${PN} += "xyz.openbmc_project.HostErrorMonitor.service"
-SECURITY_CFLAGS_pn-host-error-monitor  = "${SECURITY_NOPIE_CFLAGS}"
+
+EXTRA_OECMAKE = "-DYOCTO=1"
