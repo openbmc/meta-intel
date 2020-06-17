@@ -1,0 +1,8 @@
+Ok-To-Test+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Code-Review+2: James Feist <james.feist@linux.intel.com>
+Verified+1: Jenkins <openbmc-ci-admin@ozlabs.org>
+Submitted-by: Jason Bills <jason.m.bills@linux.intel.com>
+Submitted-at: Wed, 17 Jun 2020 22:03:15 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-intel/+/33538
+Project: openbmc/meta-intel
+Branch: refs/heads/master
