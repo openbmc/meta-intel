@@ -1,0 +1,11 @@
+Ok-To-Test+1: OpenBMC CI <openbmcbump-ci@yahoo.com>
+Verified+1: OpenBMC CI <openbmcbump-ci@yahoo.com>
+Code-Review+1: <rashmi.r.v@linux.intel.com>
+Code-Review+1: Saravanan Palanisamy <saravanan.palanisamy@linux.intel.com>
+Code-Review+2: Jason Bills <jason.m.bills@linux.intel.com>
+Code-Review+1: Vikram B <vikram.bodireddy@linux.intel.com>
+Submitted-by: Chalapathi Venkataramashetty <chalapathix.venkataramashetty@intel.com>
+Submitted-at: Thu, 30 Jul 2020 18:07:18 +0000
+Reviewed-on: https://gerrit.openbmc-project.xyz/c/openbmc/meta-intel/+/34884
+Project: openbmc/meta-intel
+Branch: refs/heads/master
